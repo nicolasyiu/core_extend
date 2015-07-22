@@ -3,7 +3,8 @@ module CoreExtend
 
     #保留小数点位数
     def decimal_point(point=2)
-      sprintf("%0.#{point}f", self).to_f
+      return sprintf("%0.#{point}f", self).to_f if point>0
+      self.to_i
     end
 
     #显示成钱数
@@ -16,21 +17,26 @@ module CoreExtend
       int_str = str.split('.')[0]
       point_str = str.split('.')[1]
 
+      return_value = ->() {
+        return "#{int_str}.#{point_str}" if point>0
+        int_str
+      }
+
       if type=='text'
-        return "#{int_str}.#{point_str}" if int_str.to_i<10000
+        return return_value.call if int_str.to_i<10000
 
         return "#{(int_str.to_i/10000.0).decimal_point(point)}万" if int_str.to_i<100000000
 
         return "#{(int_str.to_i/100000000.0).decimal_point(point)}亿"
       end
 
-      return "#{int_str}.#{point_str}" if int_str.length<3
+      return return_value.call if int_str.length<3
       index = -4
       while index.abs < int_str.length+1
         int_str.insert(index, ',')
         index -=4
       end
-      "#{int_str}.#{point_str}"
+      return_value.call
     end
   end
 end
