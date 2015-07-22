@@ -1,4 +1,3 @@
-class Float
+class BigDecimal
   include CoreExtend::FloatModule
-
 end
