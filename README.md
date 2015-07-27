@@ -27,11 +27,9 @@ Or install it yourself as:
 
 ### every
 ```ruby
-it 'every' do
-    (1..20).to_a.every(3) { |a, b, c|
-      p "#{a},#{b},#{c}"
-    }
-end
+(1..20).to_a.every(3) { |a, b, c|
+  p "#{a},#{b},#{c}"
+}
 #=>"1,2,3"
 #=>"4,5,6"
 #=>"7,8,9"
