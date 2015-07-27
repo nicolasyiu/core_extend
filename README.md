@@ -5,7 +5,9 @@ gem主要包括数组的遍历、浮点数的小数点精度的确定、金钱�
 ## Installation
 Add this line to `config/application.rb`
 
+```ruby
 require 'core_extend'
+```
 
 Add this line to your application's Gemfile:
 
@@ -25,45 +27,45 @@ Or install it yourself as:
 
 ### every
 ```ruby
-    it 'every' do
-        (1..20).to_a.every(3) { |a, b, c|
-          p "#{a},#{b},#{c}"
-        }
-    end
-    #=>"1,2,3"
-    #=>"4,5,6"
-    #=>"7,8,9"
-    #=>"10,11,12"
-    #=>"13,14,15"
-    #=>"16,17,18"
-    #=>"19,20,"
+it 'every' do
+    (1..20).to_a.every(3) { |a, b, c|
+      p "#{a},#{b},#{c}"
+    }
+end
+#=>"1,2,3"
+#=>"4,5,6"
+#=>"7,8,9"
+#=>"10,11,12"
+#=>"13,14,15"
+#=>"16,17,18"
+#=>"19,20,"
 ```
 
 ## Float
 
 ###decimal_point
 ```ruby
-    3.2268.decimal_point(2)
+3.2268.decimal_point(2)
 #=>3.23
 ```
 ###to_money
 ```ruby
-    123456789.456.to_money              #=>"123,456,789.46"
-    32005487.45.to_money('text')        #=>"3200.55万"
-    2332005487.45.to_money('text',4)    #=>"23.3201亿"
-    2332005487.45.to_money('text',0)    #=>"23亿"
-    2332005487.45.to_money('num',2)     #=>"2,332,005,487.45"
-    2332005487.45.to_money('num',0)     #=>"2,332,005,487"
-    1.to_money                          #=>"1.0"
+123456789.456.to_money              #=>"123,456,789.46"
+32005487.45.to_money('text')        #=>"3200.55万"
+2332005487.45.to_money('text',4)    #=>"23.3201亿"
+2332005487.45.to_money('text',0)    #=>"23亿"
+2332005487.45.to_money('num',2)     #=>"2,332,005,487.45"
+2332005487.45.to_money('num',0)     #=>"2,332,005,487"
+1.to_money                          #=>"1.0"
 ```
 
 ## Random
 
 ###rand_str
 ```ruby
-    str = Random.rand_str(32)
-    p str
-    #=>"tdb1hruwxd8p0z5qtdl7pvhva5uxbru9"
+str = Random.rand_str(32)
+p str
+#=>"tdb1hruwxd8p0z5qtdl7pvhva5uxbru9"
 ```
 
 
