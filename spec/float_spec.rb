@@ -15,4 +15,9 @@ describe Float do
     p "2332005487.45===#{2332005487.45.to_money('num',0)}"
     p "1.to_money===#{1.to_money}"
   end
+
+  it 'to_size' do
+    p "45200455.to_size===#{45200455.to_size}"
+    p "46023.to_size===#{46023.to_size}"
+  end
 end

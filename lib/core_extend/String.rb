@@ -1,3 +1,3 @@
 class String
-  
+
 end
