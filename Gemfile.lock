@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    core_extend (0.1.6)
+    core_extend (0.1.7)
 
 GEM
   remote: https://rubygems.org/

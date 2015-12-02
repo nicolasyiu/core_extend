@@ -66,6 +66,16 @@ p str
 #=>"tdb1hruwxd8p0z5qtdl7pvhva5uxbru9"
 ```
 
+## Hash
+###to_yaml
+```ruby
+h = {package: 'com.xxx.yyy', appName: '哈哈'}
+puts h.to_yaml
+#=>.--- !ruby/object:Hash
+#=>:appName: 哈哈
+#=>:package: com.xxx.yyy
+```
+
 
 ## Development
 
