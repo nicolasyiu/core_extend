@@ -56,6 +56,10 @@ Or install it yourself as:
 2332005487.45.to_money('num',0)     #=>"2,332,005,487"
 1.to_money                          #=>"1.0"
 ```
+### to_size
+```ruby
+45200455.to_size                    #=>"45.2 MB"
+```
 
 ## Random
 
