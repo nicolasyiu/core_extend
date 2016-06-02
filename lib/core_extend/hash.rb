@@ -8,4 +8,15 @@ class Hash
   #     end
   #   end
   # end
+
+  def kv_join(s)
+    self.map do |k, v|
+      if v.is_a?(Hash)
+        # When upload a file, make tempfile and other params out of hash.
+        v.key?('tempfile') ? "#{k}=#{v['filename']}" : v.kv_join(s)
+      else
+        "#{k}#{s}#{v}"
+      end
+    end
+  end
 end

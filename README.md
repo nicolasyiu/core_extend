@@ -87,7 +87,12 @@ puts h.to_yaml
 #=>:appName: 哈哈
 #=>:package: com.xxx.yyy
 ```
-
+###kv_join
+```ruby
+h = {:order => {"name" => "柳溪测试。。。", "phone" => "15101043867", "shipping_province" => "山东省", "shipping_city" => "枣庄市", "shipping_district" => "峄城区", "shipping_address" => "afsadfsd", "shipping_charge" => 9, "delivery_vendor" => "圆通", "pay_type" => "0", "comment" => "", "line_items_attributes" => {7174875524045 => {"product_id" => "69ec4fcb3450ebd81be117f1bd2df0f4", "product_prop_id" => "76b1b27af67021fe71001c9630056c7b", "quantity" => 1, "sale_price" => "169.0"}}}, :api_key => "dd432da4", :device_id => "20160602175425344_common"}
+h.kv_join('=)
+#=>name=柳溪测试。。。phone=15101043867shipping_province=山东省shipping_city=枣庄市shipping_district=峄城区shipping_address=afsadfsdshipping_charge=9delivery_vendor=圆通pay_type=0comment=product_id=69ec4fcb3450ebd81be117f1bd2df0f4product_prop_id=76b1b27af67021fe71001c9630056c7bquantity=1sale_price=169.0api_key=dd432da4device_id=20160602175425344_common
+```
 
 ## Development
 
