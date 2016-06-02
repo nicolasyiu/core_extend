@@ -23,6 +23,14 @@ Or install it yourself as:
 
     $ gem install core_extend
 
+## String 
+
+### urlencode
+```ruby
+'name=小明&sex=男'.urlencode
+#=> "name%3D%E5%B0%8F%E6%98%8E%26sex%3D%E7%94%B7"
+```
+
 ## Array
 
 ### every
