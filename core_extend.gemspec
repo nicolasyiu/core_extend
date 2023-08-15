@@ -6,13 +6,13 @@ require 'core_extend/version'
 Gem::Specification.new do |spec|
   spec.name          = "core_extend"
   spec.version       = CoreExtend::VERSION
-  spec.authors       = ["saxer"]
-  spec.email         = ["15201280641@qq.com"]
+  spec.authors       = ["NicolasYiu"]
+  spec.email         = ["stream8060@gmail.com"]
   spec.licenses         = ["MIT"]
 
   spec.summary       = %q{Ruby core extensions}
   spec.description   = %q{Ruby core object extensions}
-  spec.homepage      = "https://github.com/mumaoxi/core_extend"
+  spec.homepage      = "https://github.com/NicolasYiu/core_extend"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
   # delete this section to allow pushing this gem to any host.

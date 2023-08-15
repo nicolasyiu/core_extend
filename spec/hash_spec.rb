@@ -16,7 +16,7 @@ describe Hash do
 
   it 'kv_join' do
 
-    h = {:order => {"name" => "柳溪测试。。。", "phone" => "15101043867", "shipping_province" => "山东省", "shipping_city" => "枣庄市", "shipping_district" => "峄城区", "shipping_address" => "afsadfsd", "shipping_charge" => 9, "delivery_vendor" => "圆通", "pay_type" => "0", "comment" => "", "line_items_attributes" => {7174875524045 => {"product_id" => "69ec4fcb3450ebd81be117f1bd2df0f4", "product_prop_id" => "76b1b27af67021fe71001c9630056c7b", "quantity" => 1, "sale_price" => "169.0"}}}, :api_key => "dd432da4", :device_id => "20160602175425344_common"}
+    h = {:order => {"name" => "柳See测试。。。", "phone" => "1510000xxxx", "shipping_province" => "山东省", "shipping_city" => "枣庄市", "shipping_district" => "峄城区", "shipping_address" => "afsadfsd", "shipping_charge" => 9, "delivery_vendor" => "圆通", "pay_type" => "0", "comment" => "", "line_items_attributes" => {7174875524045 => {"product_id" => "69ec4fcb3450ebd81be117f1bd2df0f4", "product_prop_id" => "76b1b27af67021fe71001c9630056c7b", "quantity" => 1, "sale_price" => "169.0"}}}, :api_key => "dd432da4", :device_id => "20160602175425344_common"}
     puts "\n"+h.kv_join('=').flatten.join+"\n"
   end
 end
